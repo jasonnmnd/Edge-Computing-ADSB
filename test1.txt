@@ -1,0 +1,2 @@
+_v	9E	clock	1642191668	hexid	AC1C7F	addrtype	adsb_icao	adsb_version	0	nac_v	1 0 A	airGround	A+ 0 A	squawk	6504 0 A	vrate	3840 0 A	speed	335.2 0 A	track	255.1 0 A	emergency	none 0 A
+_v	9E	clock	1642191671	hexid	AC1C7F	nac_p	10 0 A	sil	3 0 A	sil_type	unknown 0 A	nic_baro	1 0 A	airGround	A+ 0 A	alt	15000 2 U	alt_gnss	14750 2 U	nav_alt_mcp	23008 0 A	nav_qnh	1012.0 0 A
