@@ -4,7 +4,6 @@ import math
 from parseData import CreateAircrafts, Aircraft
 from time import sleep
 # endregion
-
 # region Functions
 
 
@@ -112,10 +111,6 @@ def PlotPlaneLocation3D(polarCoordinates, lMax = 150):
     ax.set_ylim(-lMax*AXIS_BUFFER_PERCENT, lMax*AXIS_BUFFER_PERCENT)
     ax.set_xlim(-lMax*AXIS_BUFFER_PERCENT, lMax*AXIS_BUFFER_PERCENT)
     ax.set_title('All plane locations with respect to acquisition point')
-
-
-
-
 
     #ax.set_thetagrids([0, 45, 90, 135, 180, 225, 270, 315], ['E', 'NE', 'N', 'NW', 'W', 'SW', 'S', 'SE'])
 
@@ -279,24 +274,24 @@ def SimulateAllPlanes(aircrafts):
 
 # constants
 REFRESH_TIME = 0.1
-SIMULATION_TIME = 30
-REMOVE_LOST_PLANES = True
-POINTS_TO_PLOT = 10
+SIMULATION_TIME = 60
+REMOVE_LOST_PLANES = False #Sometimes data isn't recieved perfectly, this toggle removes planes that haven't been updated in a while
+POINTS_TO_PLOT = 20
 OLD_PLANE_BUFFER = 4
 AXIS_BUFFER_PERCENT = 1.1
-SHOW_HEXID = False
+SHOW_HEXID = True
 NUMBER_PLANES = False
 PLOT_3D = False
-
 
 currentlySeenData = []
 
 # endregion
 
-# Create the list of aircraft objects.
-planes = CreateAircrafts()
+if __name__ == "__main__":
+    # Create the list of aircraft objects.
+    planes = CreateAircrafts()
 
-# Run a selected simulation.
-#SimulateAllPlanes(planes)
-#SimulatePlane(planes[26])
-PlotStatVsTime(planes)
+    # Run a selected simulation.
+    # SimulateAllPlanes(planes)
+    # SimulatePlane(planes[26])
+    # PlotStatVsTime(planes)

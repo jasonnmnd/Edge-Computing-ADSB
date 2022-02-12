@@ -191,9 +191,14 @@ def PrintData():
 # region Parameter initializations
 
 # Constants
-directory = '/Users/jasondong/Desktop/Base-Station-Data/'
-REF_LATITUDE = 38.892711
-REF_LONGITUDE = -86.849098
+# This is the path to where the data is on your machine
+directory = '/Users/jasondong/Desktop/ADS-B-main/data/'
+
+# LAT and LONG of your current location
+REF_LATITUDE = 36.0014
+REF_LONGITUDE = -78.9382
+
+#These constants should stay the same for earth circumfrence and radius
 EARTH_CIRCUMFERENCE = 24901.92
 EARTH_RADIUS = 3958.8
 
@@ -210,8 +215,9 @@ planeData = []
 
 # endregion
 
-# CreateAircrafts()
-# PrintData()
+if __name__ == "__main__":
+    # Uncomment the following command to print the data within the CSV file
+    PrintData()
 
-
-# PrintCSVData()
+    # Uncomment the following command the parse the data and create airplane objects
+    CreateAircrafts()
