@@ -2,6 +2,7 @@
 import csv
 import numpy as math
 import os
+# from gpiozero import LED
 
 
 # endregion
@@ -134,6 +135,11 @@ def ParseRowData(csvData):
 # Creates the aircraft objects list for outside use. This is the primary function of this module.
 # **************************************************************************************************
 def CreateAircrafts():
+    # Interface with GPIO Pins on the RPi
+    # redLED = LED(22)
+    # greenLED = LED(17)
+    # yellowLED = LED(27)
+
     # Opens the csv file specified in FILE_PATH
     for fileName in os.listdir(directory):
         if fileName.endswith(".csv") or fileName.endswith(".txt"):
@@ -161,7 +167,9 @@ def CreateAircrafts():
     for flyingThing in range(0, len(aircrafts)):
         # Finds the indexes of the current aircraft object with respect to where its information
         # is stored in the original csv data.
+
         aircrafts[flyingThing].FindMyIndexes(hexid)
+
 
         # Fills the data lists with the current aircraft's data found in the original csv data
         aircrafts[flyingThing].FillInfo(clock, latitude, longitude, altitude, speed)
@@ -192,7 +200,7 @@ def PrintData():
 
 # Constants
 # This is the path to where the data is on your machine
-directory = '/Users/jasondong/Desktop/ADS-B-main/data/'
+directory = '/Users/jasondong/Desktop/ece590-adsb/data/'
 
 # LAT and LONG of your current location
 REF_LATITUDE = 36.0014
