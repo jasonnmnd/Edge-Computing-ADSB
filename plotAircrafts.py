@@ -292,6 +292,6 @@ if __name__ == "__main__":
     planes = CreateAircrafts()
 
     # Run a selected simulation.
-    # SimulateAllPlanes(planes)
+    #SimulateAllPlanes(planes)
     # SimulatePlane(planes[26])
-    # PlotStatVsTime(planes)
+    PlotStatVsTime(planes)
