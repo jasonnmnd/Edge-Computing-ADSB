@@ -1,5 +1,7 @@
-Repository for ECE350: Edge Computing
+Edge Computing project with Dr. Maria Gorlatova
 
-Jason Dong, Mindy Wu
+	Automatic Dependent Surveillance–Broadcast (ADS–B) is a surveillance technology in which an aircraft determines its position via satellite and other sensors while periodically broadcasting it. ADS-B serves as a secondary form of location communication and allows the aircraft to be tracked, most often by air traffic control and other government organizations. ADS-B metadata includes the airplane’s latitude, longitude, altitude, speed, etc. Certified ADS-B data links broadcast at 1090MHz (similar to a Mode S transponder) or at 978MHz. Aircraft operating at below 18,000 feet are asked by the FAA to broadcast at 978MHz to reduce congestion. 
 
-Automatic Dependent Surveillance-Broadcast Project
+	Consumer interest in airplane tracking and flight logging has led to advances in developing do-it-yourself (DIY) ADS-B receivers to intercept ADS-B signals. There is open-source software that allows civilians to install on a personal device such as a Raspberry Pi to collect and process ADS-B metadata. By utilizing PiAware installed on a Pi with other peripherals such as a software-defined radio (SDR) and a properly tuned antenna at 1090 MHz, individuals can collect, analyze, and display relevant flight data. An example of this setup can be seen below in Figure 1. The data is received in a dump1090 file as binary values. Afterwards, this data can be converted to meaningful data in CSV format to gain insight on nearby planes and their metadata. 
+
+See the full project outline, description, and report here: https://www.overleaf.com/read/knmbtcmgdjdj
